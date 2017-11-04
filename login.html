@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="favicon_wy.ico" />
+    <title>网易帐号中心</title>
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
+</head>
+<body style="background:#fff;">
+    <div class="login">
+        <div class="login_top">
+            <div class="lt_container">
+                <a href="login.html" target="_blank"><img src="images/login_logo.png" alt="" /></a>
+                <i></i>
+                <span>登录</span>
+            </div>
+        </div>
+    </div>
+    <div class="login_middle">
+        <div class="lm_container">
+            <div class="login_tab">
+                <div class="tab_top">
+                    <ul>
+                        <li class="on"><a href="javascript:;">普通登录</a></li>
+                        <li><a href="javascript:;">二维码登录</a><span class="lg_new"></span></li>
+                    </ul>
+                </div>
+                <div class="tab_bottom">
+                    <div class="libyac">
+                        <div class="ipt_box">
+                            <div class="ib_content">
+                                <span class="ibc_s1"></span>
+                                <input type="text" placeholder="邮箱"/>
+                            </div>
+                            <div class="ib_content">
+                                <span class="ibc_s2"></span>
+                                <input type="password" placeholder="密码"/>
+                            </div>
+                            <div class="slide_box">
+                                <img src="images/slide_yz.jpg"alt="" />
+                                <div class="ib_slide">
+                                    <img src="images/slider.png" alt="" />
+                                </div>
+                                <div class="slide_txt">
+                                    <em>按住滑块，拖动完成上方拼图</em>
+                                </div>
+                            </div>
+                            <div class="gj_logo"></div>
+                            <div class="gj_txt">使用<a href="javascript:;" style="color: #4aafe9;">网易帐号管家</a>，全面保护您的帐号！</div>
+                            <div class="li_btn">
+                                <a href="javascript:;">登  录</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="libycd">
+                        <p>
+                            使用
+                            <a href="javascript:;">网易帐号管家</a>
+                            或
+                            <a href="javascript:;">
+                                邮箱大师
+                            </a>
+                                扫一扫快速登录
+                        </p>
+                        <div class="login_code">
+                            <img src="images/getUrlQrcode.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="login_links">
+                        <a href="javascript:;">忘记密码？</a>|<a href="javascript:;">注册</a>|<a href="javascript:;">关于网易邮箱帐号</a>
+                    </div>
+                    <div class="loginannouce">
+                        <img src="images/Fslide.png" alt="" />
+                        <p><a href="javascript:;" style="color: red;">公告：网易邮箱帐号升级公告</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="acc_list clearfix">
+            <ul>
+                <li style="margin-right:26px;position:relative">
+                    <a href="javascript:;">
+                        <em style="background:url(images/gjApp.png)"></em>
+                        <span>网易帐号管家<br /><i>帐号保护神器，有效防止被盗</i></span>
+                    </a>
+                    <i class="lg_new"></i>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <em style="background-position:0 -150px"></em>
+                        <span>找回密码<br /><i>多种方式快速找回密码</i></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <em style="background-position:-120px -150px"></em>
+                        <span>锁定帐号<br /><i>禁止登录，防止帐号被盗</i></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <em style="background-position:-60px -150px;"></em>
+                        <span>帐号中心公众版<br /><i>帐号相关资讯公示平台</i></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <em style="background-position:-240px -150px"></em>
+                        <span>帐号修复<br /><i>通过客服解决帐号问题</i></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="login_bottom">
+        <div class="bottom_content">
+            <div class="bottom_box">
+                <p>
+                    <a href="javascript:;">About NetEase</a>-<a href="javascript:;">公司简介</a>-<a href="javascript:;">联系方式</a>-<a href="javascript:;">OAuth2.0认证</a>-<a href="javascript:;">招聘信息</a>-<a href="javascript:;">客户服务</a>-<a href="javascript:;">相关法律</a>-<a href="javascript:;">网络营销</a>
+                </p>
+                <p>网易公司版权所有 ©1997-2017</p>
+            </div>
+        </div>
+    </div> 
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    var timer_tab = '';
+    $('.tab_top li').hover(function() {
+        clearTimeout(timer_tab);
+        var that = this;
+        timer_tab = setTimeout(function(){
+            $(that).addClass('on').siblings().removeClass('on');
+            if ($('.tab_top li:first-child').is('.on')){
+                $('.libyac').show();
+                $('.libycd').hide();
+            }
+            if ($('.tab_top li:nth-child(2)').is('.on')){
+                $('.libycd').show();
+                $('.libyac').hide();
+            }
+        }, 250)
+    }, function() {
+        clearTimeout(timer_tab);
+    });
+    var timer_sl = '';
+    $('.ib_slide,.slide_txt').hover(function() {
+        clearTimeout(timer_sl);
+        timer_sl = setTimeout(function(){
+            $('.slide_box>img').show();
+        },250)
+    }, function() {
+        clearTimeout(timer_sl);
+        $('.slide_box>img').hide();
+    });
+    </script>
+</body>
+</html>

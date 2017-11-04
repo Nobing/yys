@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }
+ul, ol, li { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";}
+select, input { vertical-align:middle;}  /*垂直对齐方式*/
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; } 
+/*img {border:0;  vertical-align:middle; }  */
+table { border-collapse:collapse; }
+body {
+    font:12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font.iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/iconfont.woff') format('woff'),
+  url('../font/iconfont.ttf') format('truetype'),
+  url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont";
+}
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+a {color:#333; text-decoration:none; }
+/*a:hover{color:#bc2e2e;}*/
+h1,h2,h3,h4,h5,h6 {text-decoration:none;font-weight:normal;font-size:100%;}
+s,i,em,u{font-style:normal;text-decoration:none;}
+.col-red{color: #bc2e2e!important;}
+.col-yel{color: #c1831c!important;}
+/*::-moz-placeholder { color: #bbbbbb; }
+::-webkit-input-placeholder { color:#bbbbbb; }
+:-ms-input-placeholder { color:#bbbbbb; }*/
+
+
+/*版心盒子*/
+/*.container {  
+    width: 1190px;margin:0 auto;
+}*/
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+.flml {
+    float: left;
+    margin-left: 28px;
+}
+.frmr {
+    float: right;
+    margin-right: 28px;
+}
+.al {
+    text-align:left;
+}
+.ac {
+    text-align:center;
+}
+.ar {
+    text-align:right;
+}
+.hide {
+    display:none;
+}
+.mt10 {
+    margin-top: 10px!important;
+}
+
+.mr10 {
+    margin-right: 10px!important;
+}
+.mr8{
+    margin-right: 8px!important;
+}
+.mr5{
+    margin-right: 5px!important;
+}
+.mr2{
+    margin-right: 5px!important;
+}
+
+.mb10 {
+    margin-bottom: 10px!important;
+}
+.mt60 {
+    margin-top: 60px!important;
+}
+.mt10 {
+    margin-top: 10px!important;
+}
+.mt5 {
+    margin-top: 5px!important;
+}
+.ml10 {
+    margin-left: 10px!important;
+}
+.ml-4 {
+    margin-left: -4px!important;
+}
+.pr15 {
+    padding-right: 15px!important;
+}
+.fs12 {
+    font-size: 12px!important;
+}
+.fs17 {
+    font-size: 17px!important;
+}
+.ti1 {
+    text-indent: 1em;
+}
